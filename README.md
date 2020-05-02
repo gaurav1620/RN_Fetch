@@ -13,6 +13,6 @@
 
 
 
-## Collapsable cards
+## Collapsible cards
 <img src="./assets/ScreenshotExpanded.png" width="500">
 
