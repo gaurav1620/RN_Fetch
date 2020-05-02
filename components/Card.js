@@ -2,6 +2,7 @@ import React from 'react';
 import {Dimensions, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
 
 class Card extends React.Component{
+        
     constructor(props){
         super(props);
         this.state={
@@ -9,10 +10,6 @@ class Card extends React.Component{
         }
     }
 
-    componentDidMount(){
-
-    }
-    
     //Does not make unnecessary component updates 
     //and thus increases performance
     shouldComponentUpdate(nextProps, nextState){
@@ -45,10 +42,10 @@ class Card extends React.Component{
                     <View style={styles.buttonstyle}>
                         {  this.state.isCollapsed ?
                            <TouchableOpacity onPress={()=>this.flipButton()} style={{with:30,height:30}}> 
-                               <Image source={require('./assets/down.png') } style={{width:30,height:30}}/>
+                               <Image source={require('../assets/down.png') } style={{width:30,height:30}}/>
                            </TouchableOpacity>
                            :<TouchableOpacity onPress={()=>this.flipButton()} style={{with:30,height:30}}> 
-                               <Image source={require('./assets/up.png') } style={{width:30,height:30}}/>
+                               <Image source={require('../assets/up.png') } style={{width:30,height:30}}/>
                            </TouchableOpacity>
                         }
                     </View>
