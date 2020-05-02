@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image,Linking,Header,TouchableOpacity,Button,StatusBar,FlatList,ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import {Alert,Image,Linking,Header,TouchableOpacity,Button,StatusBar,FlatList,ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import Card from './components/Card.js';
 export default class App extends React.Component{
 
@@ -19,6 +19,15 @@ export default class App extends React.Component{
     componentDidMount() {
         this._isMounted = true;
         this.fetchContent();
+        Alert.alert(
+            "Info",
+            "Tap on black arrow to expand the card.",
+        [
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ],
+      { cancelable: false }
+    );
+    
     }
 
     componentWillUnmount() {
